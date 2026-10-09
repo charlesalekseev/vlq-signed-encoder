@@ -33,3 +33,10 @@ The trade-off: values are 32-bit signed integers only. Source-map deltas are 32-
 ## Exports
 
 `encode(n)`, `decode(str)`, `decodeOne(str, start)`, `ALPHABET`, `CONTINUATION_MASK` (0x20), `GROUP_BITS` (5).
+
+## Performance
+
+The window keeps a bounded buffer, so `push` is constant time and memory does not
+grow with the length of the stream. `peak` and `trough` are linear in the window
+size, which is the trade that keeps `push` cheap.
+
