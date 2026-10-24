@@ -1,6 +1,6 @@
 {
   "name": "vlq-signed-encoder",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Encodes and decodes signed variable-length quantities as used in source map segment encoding.",
   "type": "module",
   "main": "src/index.js",
